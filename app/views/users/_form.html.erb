@@ -1,0 +1,72 @@
+<%= form_with(model: user) do |form| %>
+  <% if user.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+        <% user.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :profile_picture_url, style: "display: block" %>
+    <%= form.text_field :profile_picture_url %>
+  </div>
+
+  <div>
+    <%= form.label :phone, style: "display: block" %>
+    <%= form.text_field :phone %>
+  </div>
+
+  <div>
+    <%= form.label :first_name, style: "display: block" %>
+    <%= form.text_field :first_name %>
+  </div>
+
+  <div>
+    <%= form.label :last_name, style: "display: block" %>
+    <%= form.text_field :last_name %>
+  </div>
+
+  <div>
+    <%= form.label :country_or_region, style: "display: block" %>
+    <%= form.text_field :country_or_region %>
+  </div>
+
+  <div>
+    <%= form.label :street_address_p1, style: "display: block" %>
+    <%= form.text_field :street_address_p1 %>
+  </div>
+
+  <div>
+    <%= form.label :street_address_p2, style: "display: block" %>
+    <%= form.text_field :street_address_p2 %>
+  </div>
+
+  <div>
+    <%= form.label :city, style: "display: block" %>
+    <%= form.text_field :city %>
+  </div>
+
+  <div>
+    <%= form.label :state_province_region, style: "display: block" %>
+    <%= form.text_field :state_province_region %>
+  </div>
+
+  <div>
+    <%= form.label :zip, style: "display: block" %>
+    <%= form.text_field :zip %>
+  </div>
+
+  <div>
+    <%= form.label :cart, style: "display: block" %>
+    <%= form.number_field :cart %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

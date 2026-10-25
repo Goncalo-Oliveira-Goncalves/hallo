@@ -1,0 +1,29 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  short_description: MyText
+  display_image_link: MyString
+  priority: 1
+  in_stock: 1
+  color: 1
+  parent_product: 1
+  long_description: MyText
+  dimension_x: 1
+  dimension_y: 1
+  dimension_z: 1
+  weight: 1
+
+two:
+  name: MyString
+  short_description: MyText
+  display_image_link: MyString
+  priority: 1
+  in_stock: 1
+  color: 1
+  parent_product: 1
+  long_description: MyText
+  dimension_x: 1
+  dimension_y: 1
+  dimension_z: 1
+  weight: 1

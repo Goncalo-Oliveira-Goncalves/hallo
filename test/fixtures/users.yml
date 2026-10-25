@@ -1,0 +1,27 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  profile_picture_url: MyString
+  phone: MyString
+  first_name: MyString
+  last_name: MyString
+  country_or_region: MyString
+  street_address_p1: MyString
+  street_address_p2: MyString
+  city: MyString
+  state_province_region: MyString
+  zip: MyString
+  cart: 1
+
+two:
+  profile_picture_url: MyString
+  phone: MyString
+  first_name: MyString
+  last_name: MyString
+  country_or_region: MyString
+  street_address_p1: MyString
+  street_address_p2: MyString
+  city: MyString
+  state_province_region: MyString
+  zip: MyString
+  cart: 1
