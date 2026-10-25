@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :colors
+  root "products#index"
+
   resources :carts
   resources :products
   resources :users

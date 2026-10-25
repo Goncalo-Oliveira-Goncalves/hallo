@@ -8,3 +8,80 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@1..144,1..1000&display=swap');
+
+* {
+    --plus-thickness: .1rem;
+    --plus-size: 8rem;
+    --background-color: hwb(201 0% 93.3%);
+    --line-color: hwb(201 0% 57.1% / 0.22);
+
+    --offset: 1rem;
+}
+
+body {
+    color: white;
+
+	background-color: var(--background-color);
+    background-image: 
+        /* diagonal lines */
+        linear-gradient(
+            -45deg,
+            transparent 45%,
+            hwb(201 0% 57.1% / 0.22) 50%,
+            transparent 55%
+        ),
+
+        /* big grid */
+        linear-gradient(
+            hwb(201 0% 57.1% / 0.22) calc(var(--plus-thickness) / 2),
+            transparent calc(var(--plus-thickness) / 2)
+        ),
+        linear-gradient(
+            90deg,
+            hwb(201 0% 57.1% / 0.22) calc(var(--plus-thickness) / 2),
+            transparent calc(var(--plus-thickness) / 2)
+        ),
+        
+        /* big plus signs */
+        radial-gradient(
+            circle,
+            transparent 10%,
+            var(--background-color) 10%
+        ),
+        linear-gradient(
+            #fff var(--plus-thickness),
+            transparent var(--plus-thickness)
+        ),
+        linear-gradient(
+            90deg,
+            #fff var(--plus-thickness),
+            transparent var(--plus-thickness)
+        )
+    ;
+	background-size:
+        /* diagonal lines  */
+        1rem 1rem,
+
+        /* big grid */
+        var(--plus-size) var(--plus-size),
+        var(--plus-size) var(--plus-size),
+
+        /* big plus signs */
+        var(--plus-size) var(--plus-size),
+        var(--plus-size) var(--plus-size),
+        var(--plus-size) var(--plus-size);
+    background-position:
+        /* diagonal lines  */
+        var(--offset) var(--offset),
+
+        /* big grid */
+        var(--offset) var(--offset),
+        var(--offset) var(--offset),
+
+        /* big plus signs */
+        calc(var(--plus-size) / 2 + var(--offset)) calc(var(--plus-size) / 2 + var(--offset)),
+        var(--offset) var(--offset),
+        var(--offset) var(--offset);
+}

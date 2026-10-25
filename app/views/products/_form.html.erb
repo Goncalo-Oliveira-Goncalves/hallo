@@ -1,77 +1,87 @@
-<%= form_with(model: product) do |form| %>
-  <% if product.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+<div class="form-full-width-container">  
+  <div class="form-container">
+    <%= form_with(model: product) do |form| %>
+      <% if product.errors.any? %>
+        <div style="color: red">
+          <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
 
-      <ul>
-        <% product.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+          <ul>
+            <% product.errors.each do |error| %>
+              <li><%= error.full_message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+      <fieldset>
+        <p>This stuff displays on the main page.</p>
+        <div class="main-form-fields-container">
+          <div class="main-form-fields">
+            <div>
+              <%= form.text_field :name, placeholder: "Name", class: "substitution-type-input important-input" %>
+            </div>
+            <div>
+              <%= form.textarea :short_description, placeholder: "A short description of your awesome new product!", class: "substitution-type-input full-width-textarea" %>
+            </div>        
+          </div>
+          <div class="display-image-input">
+            <%= form.label :display_image_link, style: "display: block" %>
+            <%= form.text_field :display_image_link %>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <div>
+          <%= form.label :priority, style: "display: block" %>
+          <%= form.number_field :priority %>
+        </div>
+
+        <div>
+          <%= form.label :in_stock, style: "display: block" %>
+          <%= form.number_field :in_stock %>
+        </div>
+
+        <div>
+          <%= form.label :color, style: "display: block" %>
+          <%= form.number_field :color %>
+        </div>
+
+        <div>
+          <%= form.label :parent_product, style: "display: block" %>
+          <%= form.number_field :parent_product %>
+        </div>
+
+        <div>
+          <%= form.label :long_description, style: "display: block" %>
+          <%= form.textarea :long_description %>
+        </div>
+
+        <div>
+          <%= form.label :dimension_x, style: "display: block" %>
+          <%= form.number_field :dimension_x %>
+        </div>
+
+        <div>
+          <%= form.label :dimension_y, style: "display: block" %>
+          <%= form.number_field :dimension_y %>
+        </div>
+
+        <div>
+          <%= form.label :dimension_z, style: "display: block" %>
+          <%= form.number_field :dimension_z %>
+        </div>
+
+        <div>
+          <%= form.label :weight, style: "display: block" %>
+          <%= form.number_field :weight %>
+        </div>
+      </fieldset>
+      
+      <div>
+        <%= form.submit %>
+      </div>
+    <% end %>
   </div>
+<div>
 
-  <div>
-    <%= form.label :short_description, style: "display: block" %>
-    <%= form.textarea :short_description %>
-  </div>
-
-  <div>
-    <%= form.label :display_image_link, style: "display: block" %>
-    <%= form.text_field :display_image_link %>
-  </div>
-
-  <div>
-    <%= form.label :priority, style: "display: block" %>
-    <%= form.number_field :priority %>
-  </div>
-
-  <div>
-    <%= form.label :in_stock, style: "display: block" %>
-    <%= form.number_field :in_stock %>
-  </div>
-
-  <div>
-    <%= form.label :color, style: "display: block" %>
-    <%= form.number_field :color %>
-  </div>
-
-  <div>
-    <%= form.label :parent_product, style: "display: block" %>
-    <%= form.number_field :parent_product %>
-  </div>
-
-  <div>
-    <%= form.label :long_description, style: "display: block" %>
-    <%= form.textarea :long_description %>
-  </div>
-
-  <div>
-    <%= form.label :dimension_x, style: "display: block" %>
-    <%= form.number_field :dimension_x %>
-  </div>
-
-  <div>
-    <%= form.label :dimension_y, style: "display: block" %>
-    <%= form.number_field :dimension_y %>
-  </div>
-
-  <div>
-    <%= form.label :dimension_z, style: "display: block" %>
-    <%= form.number_field :dimension_z %>
-  </div>
-
-  <div>
-    <%= form.label :weight, style: "display: block" %>
-    <%= form.number_field :weight %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
-<% end %>

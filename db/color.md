@@ -1,0 +1,2 @@
+color:string
+hex:string
