@@ -1,62 +1,22 @@
-<div id="<%= dom_id product %>">
+<div id="<%= dom_id product %>" class="shoppercard">
   <div>
-    <strong>Name:</strong>
-    <%= product.name %>
-  </div>
+    <div class="name">
+      <%= product.name %>
+    </div>
 
-  <div>
-    <strong>Short description:</strong>
-    <%= product.short_description %>
-  </div>
+    <div class="description">
+      <%= product.short_description %>
 
-  <div>
-    <strong>Display image link:</strong>
-    <%= product.display_image_link %>
+      <%# the bellow code is added as a tag at the end of the description %>
+      <% if product.in_stock < 5 %>
+        <div class="in-stock">
+          <%= product.in_stock %> in stock
+        </div>
+      <% end %>
+    </div>
   </div>
-
-  <div>
-    <strong>Priority:</strong>
-    <%= product.priority %>
+    
+  <div class="image-link">
+    <img src=<%= product.display_image_link %> alt="product image">
   </div>
-
-  <div>
-    <strong>In stock:</strong>
-    <%= product.in_stock %>
-  </div>
-
-  <div>
-    <strong>Color:</strong>
-    <%= product.color %>
-  </div>
-
-  <div>
-    <strong>Parent product:</strong>
-    <%= product.parent_product %>
-  </div>
-
-  <div>
-    <strong>Long description:</strong>
-    <%= product.long_description %>
-  </div>
-
-  <div>
-    <strong>Dimension x:</strong>
-    <%= product.dimension_x %>
-  </div>
-
-  <div>
-    <strong>Dimension y:</strong>
-    <%= product.dimension_y %>
-  </div>
-
-  <div>
-    <strong>Dimension z:</strong>
-    <%= product.dimension_z %>
-  </div>
-
-  <div>
-    <strong>Weight:</strong>
-    <%= product.weight %>
-  </div>
-
 </div>

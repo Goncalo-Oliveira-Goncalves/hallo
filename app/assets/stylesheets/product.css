@@ -1,0 +1,66 @@
+#products {
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 100%;
+    gap: 10px;
+
+    color: black;
+}
+
+#products > div {
+    background-color: yellow;
+}
+
+.cta-link {
+    margin: 10px;
+    background-color: white;
+
+    padding: 10px;
+
+    width: 100%;
+
+    text-decoration: none;
+}
+
+.in-stock {
+    color: red;
+}
+
+.priority-high {
+    flex: 3;
+
+    background-color: black;
+}
+
+.priority-medium {
+    flex: 2;
+}
+
+.priority-low {
+    flex: 1;
+}
+
+.priority-default {
+    flex: 1;
+}
+
+.image-link > img {
+    width: 100px;
+}
+
+.shoppercard {
+    display: grid;
+    grid-template: 1fr / 2fr 1fr;
+
+    padding: 10px;
+}
+
+.image-link > img {
+    width: 100%;
+}
+
+.name {
+    font-size: 2rem;
+    font-weight: 900;
+}

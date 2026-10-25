@@ -14,7 +14,7 @@
       <% end %>
 
       <fieldset>
-        <p>This stuff displays on the main page.</p>
+        <p>Main page display</p>
         <div class="main-form-fields-container">
           <div class="main-form-fields">
             <div>
@@ -25,8 +25,8 @@
             </div>        
           </div>
           <div class="display-image-input">
-            <%= form.label :display_image_link, style: "display: block" %>
-            <%= form.text_field :display_image_link %>
+            <%= form.label :display_image_link, style: "display: block", id: "image_url" %>
+            <%= form.text_field :display_image_link, id: "image_url" %>
           </div>
         </div>
       </fieldset>

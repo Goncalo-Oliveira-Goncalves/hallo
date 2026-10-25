@@ -9,6 +9,20 @@
 .form-container {
     max-width: 800px;
     width: 100%;
+
+    color: black;
+    background-color: yellow;
+}
+
+fieldset {
+    border: 0px;
+}
+
+fieldset > p {
+    text-transform: uppercase;
+    font-size: .5em;
+
+    color: black;
 }
 
 input, textarea {
@@ -34,7 +48,6 @@ input, textarea {
     margin: 0px;
     border: 0px;
 
-    font-family: "Google Sans Flex", "Sans", "Arial", "Helvetica";
     font-weight: 200;
     font-size: 1em;
 }
