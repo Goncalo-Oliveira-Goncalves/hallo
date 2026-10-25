@@ -13,7 +13,11 @@
 
 * {
     --plus-thickness: .1rem;
-    --plus-size: 8rem;
+    --plus-size: 6rem;
+
+    --small-plus-thickness: calc(var(--plus-thickness) / 2);
+    --small-plus-size: calc(var(--plus-size) / 5);
+
     --background-color: hwb(201 0% 93.3%);
     --line-color: hwb(201 0% 57.1% / 0.22);
 
@@ -33,7 +37,7 @@ body {
             transparent 55%
         ),
 
-        /* big grid */
+        /* subtle grid */
         linear-gradient(
             hwb(201 0% 57.1% / 0.22) calc(var(--plus-thickness) / 2),
             transparent calc(var(--plus-thickness) / 2)
@@ -42,46 +46,68 @@ body {
             90deg,
             hwb(201 0% 57.1% / 0.22) calc(var(--plus-thickness) / 2),
             transparent calc(var(--plus-thickness) / 2)
+        ),
+
+        /* big grid mask */
+        linear-gradient(
+            to right,
+            transparent 10%,
+            var(--background-color) 10%,
+            var(--background-color) 90%,
+            transparent 90%
+        ),
+        linear-gradient(
+            to bottom,
+            transparent 10%,
+            var(--background-color) 10%,
+            var(--background-color) 90%,
+            transparent 90%
         ),
         
-        /* big plus signs */
-        radial-gradient(
-            circle,
-            transparent 10%,
-            var(--background-color) 10%
+        /* big grid */
+        linear-gradient(
+            to bottom,
+            #fff3 calc(var(--plus-thickness) / 2),
+            transparent calc(var(--plus-thickness) / 2)
         ),
         linear-gradient(
-            #fff var(--plus-thickness),
-            transparent var(--plus-thickness)
-        ),
-        linear-gradient(
-            90deg,
-            #fff var(--plus-thickness),
-            transparent var(--plus-thickness)
+            to right,
+            #fff3 calc(var(--plus-thickness) / 2),
+            transparent calc(var(--plus-thickness) / 2)
         )
     ;
-	background-size:
+	
+    background-size:
         /* diagonal lines  */
         1rem 1rem,
 
-        /* big grid */
+        /* subtle grid */
         var(--plus-size) var(--plus-size),
         var(--plus-size) var(--plus-size),
 
-        /* big plus signs */
+        /* big grid mask */
         var(--plus-size) var(--plus-size),
         var(--plus-size) var(--plus-size),
-        var(--plus-size) var(--plus-size);
+        
+        /* big grid */
+        var(--plus-size) var(--plus-size),
+        var(--plus-size) var(--plus-size)
+    ;
+
     background-position:
         /* diagonal lines  */
         var(--offset) var(--offset),
-
+    
+        /* subtle grid */
+        var(--offset) var(--offset),
+        var(--offset) var(--offset),
+        
+        /* big grid mask */
+        var(--offset) var(--offset),
+        var(--offset) var(--offset),
+        
         /* big grid */
         var(--offset) var(--offset),
-        var(--offset) var(--offset),
-
-        /* big plus signs */
-        calc(var(--plus-size) / 2 + var(--offset)) calc(var(--plus-size) / 2 + var(--offset)),
-        var(--offset) var(--offset),
-        var(--offset) var(--offset);
+        var(--offset) var(--offset)
+    ;
 }
